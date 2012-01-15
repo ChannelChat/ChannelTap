@@ -1,0 +1,31 @@
+# Eclipse stuff
+/.classpath
+/.project
+/.settings
+
+# netbeans
+nbbuild.xml
+nbproject/*
+lib/*
+!lib/*.jar
+
+# we use ANT!
+/target
+
+# vim
+.*.sw[a-p]
+
+# various other potential build files
+/build
+/bin
+/dist
+/manifest.mf
+
+# Mac filesystem dust
+/.DS_Store
+
+# intellij
+*.iml
+*.ipr
+*.iws
+.idea/

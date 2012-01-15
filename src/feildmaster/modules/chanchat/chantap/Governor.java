@@ -12,9 +12,9 @@ import static com.feildmaster.channelchat.channel.ChannelManager.getManager;
 
 public class Governor extends JavaPlugin {
     protected static final Map<String, Switch> map = new HashMap<String, Switch>();
+    private final Interceptor intercept = new Interceptor();
 
     public void onEnable() {
-        Interceptor intercept = new Interceptor();
         getServer().getPluginManager().registerEvent(Event.Type.PLAYER_CHAT, intercept, Event.Priority.Monitor, this);
         getServer().getPluginManager().registerEvent(Event.Type.PLAYER_JOIN, intercept, Event.Priority.Monitor, this);
         getServer().getPluginManager().registerEvent(Event.Type.PLAYER_QUIT, intercept, Event.Priority.Monitor, this);
