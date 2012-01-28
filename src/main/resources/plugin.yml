@@ -1,0 +1,13 @@
+name: ${name}
+main: com.feildmaster.module.chantap.Governor
+version: ${version}
+author: feildmaster
+depend: [ChannelChat]
+
+commands:
+  tap:
+    description: Main function for tapping channels. :D
+
+permissions:
+  Chan.Tap:
+    description: Allows players to tap channels/players
