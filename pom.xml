@@ -30,6 +30,7 @@
             <artifactId>ChannelChat</artifactId>
             <version>0.6 Beta-SNAPSHOT</version>
             <type>jar</type>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
     <build>

@@ -22,12 +22,12 @@ public class Governor extends Module {
             }
         }
 
-        getServer().getLogger().info(format(String.format("v%1$s Enabled!", getDescription().getVersion())));
+        if(getConfig().needsUpdate()) {
+            saveDefaultConfig();
+        }
     }
 
-    public void onDisable() {
-        getServer().getLogger().info(format("Disabled!"));
-    }
+    public void onDisable() {}
 
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if(!(sender instanceof Player)) {
@@ -82,9 +82,5 @@ public class Governor extends Module {
         }
 
         return true;
-    }
-
-    public String format(String message) {
-        return String.format("[%1$s] %2$s", getDescription().getName(), message);
     }
 }
